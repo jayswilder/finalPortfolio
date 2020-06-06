@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#about {
+    width: 100%;
+    height: 100vh;
+    background-image: url(sunset.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    " intro intro intro intro intro intro intro intro intro intro intro intro intro"
+    " . . . . . . . . . . . . ."
+    " . . . . . . . . . . . . ."
+    " . bio bio . school school . aca aca . accEdu accEdu ."
+    
+
+    " . . . . . . . . . . . . ."
+    ;
+}
+
+#bio {
+    grid-area: bio;
+    margin-left: 50px;
+}
+
+#aca {
+    grid-area: aca;
+}
+
+#school {
+    grid-area: school;
+}
+
+#accEdu {
+    grid-area: accEdu;
+}
+
+#introduction {
+    grid-area: intro;
+    display: flex;
+    align-items: center;
+    font-size: 6rem;
+    color: rgb(226, 226, 226);
+    padding-top: 80px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    justify-content: center;
+    word-spacing: 50px;
+    height: fit-content;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, .3);
+}
+
+article {
+    width: 350px;
+    height: 600px;
+    background: rgba(226, 226, 226, .4);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .4), -5px -5px 15px rgba(226, 226, 226, .2);
+    font-size: 1.1rem;
+}
+
+article:hover {
+    box-shadow: 5px 5px 20px rgba(226, 226, 226, .2), -5px -5px 15px rgba(0, 0, 0, .4);    
+}
+
+article p {
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 2;
+    text-shadow: 1px 1px rgba(0, 0, 0, 1);
+}
+
+.highlight-dark {
+    color: rgba(0, 0, 0, .8);
+    word-spacing: 5px;
+    text-shadow: none;
+}
+
+.fas {
+    font-size: 15vh;
+    margin-bottom: 20px;
+}
+
+hr {
+    height: 6px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .4);
+    margin-bottom: 20px;
+}
+
+#school img {
+    width: 15vh;
+    margin: 10px;
+}
+
+
+
+/* 
+                ===========================  Media  =======================================
+===========================================================================================================
+                ==========================  Queries  ======================================
+ */
+
+ @media screen and (min-width: 300px) {
+    #about {
+        grid-template-rows: .2fr .2fr .2fr .2fr;
+        grid-template-areas:
+            " intro "
+            " bio "
+            " school "
+            " aca " 
+            " accEdu "
+            ;
+        padding-left: 0;
+    }
+
+    article {
+        width: 100vw;
+        height: 120px;
+        border-radius: 0;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgba(226, 226, 226, .7);
+        transition: ease-in-out 500ms;
+    }
+
+    article p {
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .highlight-dark {
+        font-weight: bold;
+    }
+
+    #introduction {
+        font-size: 1.3rem;
+        word-spacing: 0px;
+        padding: 60px 0 15px;
+        width: 100vw;
+        justify-content: center;    
+    }
+
+    .fas {
+        display: none;
+    }
+
+    #bio {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    br {
+        display: none;
+    }
+
+    #school img {
+        width: 11vh;
+        margin-top: 5px;
+    }
+
+}
+
+/* 
+                ===========================  Screen Size  =======================================
+===========================================================================================================
+                ============================  700 Pixels  =======================================
+ */
+
+
+
+@media screen and (min-width: 501px) {
+    #about {
+        grid-template-rows: .2fr .2fr .2fr .2fr;
+        grid-template-areas:
+            " intro "
+            " bio "
+            " school "
+            " aca " 
+            " accEdu "
+            ;
+        padding-left: 0;
+    }
+
+    article {
+        width: 100vw;
+        height: 175px;
+        border-radius: 0;
+        padding: 10px;
+        margin-bottom: 25px;
+        background-color: rgba(226, 226, 226, .7);
+        transition: ease-in-out 500ms;
+    }
+
+    article p {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .highlight-dark {
+        font-weight: bold;
+    }
+
+    #introduction {
+        font-size: 1.5rem;
+        word-spacing: 0px;
+        padding: 100px 0 35px;
+        padding-top: 100px;
+        padding-bottom: 30px;
+        width: 100vw;
+        justify-content: center;    
+    }
+
+    .fas {
+        display: none;
+    }
+
+    #bio {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 35px auto 25px;
+        width: 80vw;
+    }
+
+    #school {
+        display: flex;
+        width: 80vw;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    #aca {
+        width: 80vw;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        padding: 25px;
+    }
+
+    #accEdu {
+        width: 80vw;
+        margin: 25px auto;
+        display: flex;
+        align-items: center;
+        padding: 25px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    br {
+        display: none;
+    }
+
+    #school img {
+        padding: 15px;
+        width: 175px;
+    }
+
+
+}
+
+
+/* 
+                ===========================  Screen Size  =======================================
+===========================================================================================================
+                ============================  1024 Pixels  =======================================
+ */
+
+
+
+ @media screen and (min-width: 901px) {
+
+    #about {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: .2fr .2fr .2fr .2fr .2fr;
+        grid-template-areas:
+            " intro intro intro intro"
+            " . . . . "
+            " . bio school . "
+            " . . . . "
+            " . aca accEdu . " 
+            ;
+        padding-left: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    #introduction {
+        display: flex;
+        align-items: flex-end;
+        width: 100vw;
+        height: 300px;
+        font-size: 4rem;
+        padding-bottom: 60px;
+    }
+
+    #bio {
+        width: 350px;
+        height: 400px;
+        margin-right: 40px;
+    }
+
+    #school {
+        width: 350px;
+        height: 400px;
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    br {
+        display: block;
+    }
+    #aca {
+        width: 350px;
+        height: 400px;
+        margin-right: 40px;
+    }   
+
+    br {
+        display: block;
+    }
+
+    #accEdu {
+        width: 350px;
+        height: 400px;
+        margin-left: 40px;
+    }
+
+    br {
+        display: block;
+    }
+
+    #school img {
+        width: 175px;
+        height: 175px;
+    }
+
+    article p {
+        font-size: 1.25rem;
+    }
+
+ }
+
+
+
+ /* 
+                ===========================  Screen Size  =======================================
+===========================================================================================================
+                ============================  1440 Pixels  =======================================
+ */
+
+
+
+ @media screen and (min-width: 1025px) {
+
+    #about {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: .2fr .2fr .2fr .2fr .2fr;
+        grid-template-areas:
+            " intro . . . "
+            " intro . bio school "
+            " intro . . . "
+            " intro . aca accEdu "
+            " intro . . . " 
+            ;
+        padding-left: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    #introduction {
+        display: flex;
+        align-items: center;
+        width: 350px;
+        height: 100vh;
+        line-height: 2.5;
+        padding: 25px;
+    }
+
+    #bio {
+        height: 325px;
+        width: 380px;
+        margin-top: 100px;
+        margin-bottom: 0;
+    }
+
+    #school {
+        height: 325px;
+        width: 380px;
+        margin-top: 100px;
+        margin-right: 75px;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    #school img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #aca {
+        height: 325px;
+        width: 380px;
+        line-height: 1;
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    #accEdu {
+        height: 325px;
+        width: 380px;
+        margin-right: 75px;
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    br {
+        display: none;
+    }
+
+ }
+
+ /* 
+                ===========================  Screen Size  =======================================
+===========================================================================================================
+                ============================  1920 Pixels  =======================================
+ */
+
+
+
+ @media screen and (min-width: 1441px) {
+    #about {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: .2fr .2fr .2fr .2fr .2fr;
+        grid-template-areas:
+            " intro . . . "
+            " intro . bio school "
+            " intro . . . "
+            " intro . aca accEdu "
+            " intro . . . " 
+            ;
+        padding-left: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    #introduction {
+        display: flex;
+        align-items: center;
+        width: 350px;
+        height: 100vh;
+        line-height: 2.5;
+        padding: 25px;
+    }
+
+    #bio {
+        height: 325px;
+        width: 425px;
+        margin-top: 100px;
+        margin-bottom: 0;
+        margin-right: 150px;
+    }
+
+    #school {
+        height: 325px;
+        width: 425px;
+        margin-top: 100px;
+        margin-right: 175px;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    #school img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #aca {
+        height: 325px;
+        width: 425px;
+        line-height: 1;
+        margin-top: 25px;
+        margin-right: 150px;
+    }
+
+    #accEdu {
+        height: 325px;
+        width: 425px;
+        margin-right: 150px;
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    br {
+        display: block;
+    }
+ }
