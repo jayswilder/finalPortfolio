@@ -61,7 +61,7 @@
 article {
     width: 350px;
     height: 600px;
-    background: rgba(226, 226, 226, .4);
+    background-color: rgba(226, 226, 226, .3);
     border-radius: 10px;
     color: white;
     text-align: center;
@@ -78,7 +78,7 @@ article p {
     font-weight: bold;
     letter-spacing: 2px;
     line-height: 2;
-    text-shadow: 1px 1px rgba(0, 0, 0, 1);
+    /* text-shadow: 1px 1px rgba(0, 0, 0, 1); */
 }
 
 .highlight-dark {
@@ -132,7 +132,6 @@ hr {
         border-radius: 0;
         padding: 10px;
         margin-bottom: 10px;
-        background-color: rgba(226, 226, 226, .7);
         transition: ease-in-out 500ms;
     }
 
@@ -204,7 +203,6 @@ hr {
         border-radius: 0;
         padding: 10px;
         margin-bottom: 25px;
-        background-color: rgba(226, 226, 226, .7);
         transition: ease-in-out 500ms;
     }
 
